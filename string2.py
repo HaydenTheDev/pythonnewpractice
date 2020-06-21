@@ -1,12 +1,12 @@
-number ="9,233;372:036 854,775;807"
+number = input("Please enter a series of numbers, using any separators you like: ")
 separations = ""
 
 #  stepping through a for loop in debugger
 for char in number:
-    if not char.isnumeric():
+    if not char.capitalize():
         separations = separations + char
 
-print(separations)
+#print(separations)
 
 values = "".join(char if char not in separations else " " for char in number).split()
-print([int(val) for val in values])
+print(sum([int(val) for val in values]))
