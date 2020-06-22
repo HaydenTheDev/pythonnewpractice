@@ -7,7 +7,8 @@ input("Press enter to start")
 guesses = 1
 
 while True:
-    guess = low + (high -low) // 2 #  formula for game
+    print("\tGuessing in the range of {} to {}".format(low, high))
+    guess = low + (high - low) // 2 #  formula for game
     high_low = input("My guess is {}. Should i guess higher or lower? "
                      "Enter h or l, or c if my guess was correct. "
                      .format(guess)).casefold()
@@ -20,4 +21,5 @@ while True:
         break
     else:
         print("Please enter h, l, c")
-    guesses = guesses + 1
+    # guesses = guesses + 1
+    guesses += 1
