@@ -11,5 +11,15 @@ even = [2, 4, 6, 8]
 odd = [1, 3, 5, 7, 9]
 
 numbers = even + odd
-numbers.sort()  # This sorts the lists of even and odd
-print(numbers)
+numbers_in_order = sorted(numbers)
+# numbers.sort()  # This sorts the lists of even and odd
+print(numbers_in_order) #  sorted gives the same result as .sort()
+
+if numbers == numbers_in_order:
+    print("The lists are equal")
+else:
+    print("The lists are not equal")
+if numbers_in_order == sorted(numbers):
+    print("The lists are equal")
+else:
+    print("The lists are not equal")
