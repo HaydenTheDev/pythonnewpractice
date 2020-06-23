@@ -31,19 +31,29 @@
 # print(my_range)
 # print(my_range.index(4))
 
-decimals = range(0, 100)
-print(decimals)
+# decimals = range(0, 100)
+# print(decimals)
+#
+# my_range = decimals[3:40:3]
+# print(my_range == range(3, 40, 3))
+# print(range(0, 5, 2) == range(0, 6, 2))
+# print(list(range(0, 5, 2)))
+# print(list(range(0, 6, 2)))
+#
+# r = range(0, 100)
+# print(r)
+#
+# for i in r[::-2]:
+#     print(i)
+#
+#     for l in range(99, 0, -2):
+#         print(l)
+#
+# print('=' * 50)
+# print(range(0, 100)[::-2] == range(99, 0, -2))
+# for n in range(0, 100, -2):
+#     print(n)
 
-my_range = decimals[3:40:3]
-print(my_range)
-
-for i in my_range:
-    print(i)
-
-    print("=" * 40)
-
-    for i in range(3, 40 , 3):
-        print(i)
-
-    print(my_range == range(3, 40, 3))
+back_string = "egaugnal lufrewop yrev a si nohtyp"
+print(back_string[::-1])
 
