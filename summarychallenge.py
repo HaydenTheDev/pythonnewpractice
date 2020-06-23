@@ -25,4 +25,22 @@ while char in options:
     elif char == "5":
         print("You have chosen WarZone")
     else:
-        pass
+        print("Please choose a valid number from the menu.")
+        print(options)
+
+
+#  This is the solution! so my code could have been condensed by alot,
+#  still got the right output.
+# choice = "-"
+# while choice != "0":
+#     if choice in "12345":
+#         print("You chose {}".format(choice))
+#     else:
+#         print("Please choose your options")
+#         print("1:\tYou have chosen WoW")
+#         print("2:\tYou have chosen Runescape")
+#         print("3:\tYou have chosen RocketLeague")
+#         print("4:\tYou have chosen Hots")
+#         print("5:\tYou have chosen WarZone")
+#         print("0:\tExit")
+#     choice = input()
