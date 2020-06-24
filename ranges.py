@@ -53,7 +53,13 @@
 # print(range(0, 100)[::-2] == range(99, 0, -2))
 # for n in range(0, 100, -2):
 #     print(n)
+#
+# back_string = "egaugnal lufrewop yrev a si nohtyp"
+# print(back_string[::-1])
+#
+# r = range(0, 10)
+# for i in r[::-1]:
+#     print(i)
 
-back_string = "egaugnal lufrewop yrev a si nohtyp"
-print(back_string[::-1])
+
 
