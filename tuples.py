@@ -4,13 +4,30 @@
 # print("a", "b", "c")
 # print(("a", "b", "c"))
 
-welcome = "Welcome to my nightmare", "Alice Cooper", 1975
-bad ="Bad Company", "Bad Company", 1974
-metallica = "Ride the Lightning", "Metallica", 1984
-print(welcome[0])
+# welcome = "Welcome to my nightmare", "Alice Cooper", 1975
+# bad ="Bad Company", "Bad Company", 1974
+# metallica = "Ride the Lightning", "Metallica", 1984
+# print(welcome[0])
+#
+# metallica2 = ["Ride the Lightning", "Metallica", 1984]
+# print(metallica2)
+# metallica2[0] = "Master of puppets"
+# print(metallica2)
+#
+# titles, artist, year = metallica
+# print(titles)
+# print(artist)
+# print(year)
 
-metallica2 = ["Ride the Lightning", "Metallica", 1984]
-print(metallica2)
-metallica2[0] = "Master of puppets"
-print(metallica2)
+imelda = "Mrore Mayhem", "Imilda May", 2011, (1, "Pulling the Rug"), (2, "Psycho")
+
+print(imelda)
+
+title, artist, year, track1, track2, = imelda
+print(title)
+print(artist)
+print(year)
+print(track1)
+print(track2)
+
 
