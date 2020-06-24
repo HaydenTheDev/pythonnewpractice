@@ -19,16 +19,16 @@
 # print(artist)
 # print(year)
 
-imelda = "Mrore Mayhem", "Imilda May", 2011, ((1, "Pulling the Rug"), (2, "Psycho"))
+imelda = "More Mayhem", "Imelda May", 2011, ((1, "Pulling the Rug"), (2, "Psycho"))
 
 print(imelda)
 
-title, artist, year, tracks= imelda
+title, artist, year, tracks = imelda
 print(title)
 print(artist)
 print(year)
 for song in tracks:
     track, title = song
-    print("\tTrack number {}, Title: {}".format(track,title))
+    print("\tTrack number {}, Title: {}".format(track, title))
 
 
