@@ -32,5 +32,14 @@ fruit = {"orange": "a sweet, orange, citrus fruit", "apple": "good for making ci
 # for f in ordered_keys:
 #     print(f + " - " + fruit[f])
 
-for f in sorted(fruit.keys()):
-    print(f + " - " + fruit[f])
+# for f in sorted(fruit.keys()):
+#     print(f + " - " + fruit[f])
+
+# for val in fruit.values():
+#     print(val)
+
+# fruit_keys = fruit.keys()
+# print(fruit_keys)
+#
+# fruit["tomato"] = "not nice with ice cream"
+# print(fruit_keys)
