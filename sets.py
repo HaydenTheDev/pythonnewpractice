@@ -48,16 +48,34 @@
 # print(squares.intersection(even))
 # print(squares & even)
 
+# even = set(range(0, 40, 2))
+# print(sorted(even))
+# squares_tuple = (4, 6, 9, 16, 25)
+# squares = set(squares_tuple)
+# print(sorted(squares))
+#
+# print("even minus squares")
+# print(sorted(even.difference(squares)))
+# print(sorted(even - squares))
+#
+# print("Squares minus even")
+# print(squares.difference(even))
+# print(squares - even)
+#
+# print("-" * 40)
+# print(sorted(even))
+# print(squares)
+# even.difference_update(squares)
+# print(sorted(even))
+
 even = set(range(0, 40, 2))
 print(sorted(even))
 squares_tuple = (4, 6, 9, 16, 25)
 squares = set(squares_tuple)
 print(sorted(squares))
 
-print("even minus squares")
-print(sorted(even.difference(squares)))
-print(sorted(even - squares))
+print("symmetric even minus squares")
+print(sorted(even.symmetric_difference(squares)))
 
-print("Squares minus even")
-print(squares.difference(even))
-print(squares - even)
+print("symmetric squares minus even")
+print(squares.symmetric_difference(even))
