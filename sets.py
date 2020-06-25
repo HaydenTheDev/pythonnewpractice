@@ -48,3 +48,16 @@
 # print(squares.intersection(even))
 # print(squares & even)
 
+even = set(range(0, 40, 2))
+print(sorted(even))
+squares_tuple = (4, 6, 9, 16, 25)
+squares = set(squares_tuple)
+print(sorted(squares))
+
+print("even minus squares")
+print(sorted(even.difference(squares)))
+print(sorted(even - squares))
+
+print("Squares minus even")
+print(squares.difference(even))
+print(squares - even)
