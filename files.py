@@ -1,5 +1,6 @@
-jabber = open("/Users/power/Desktop/original.txt")
+jabber = open("/Users/power/Desktop/original.txt", 'r')
 for line in jabber:
-    print(line)
+    if "jabberwock" in line.lower():
+        print(line, end='')
 
 jabber.close()
