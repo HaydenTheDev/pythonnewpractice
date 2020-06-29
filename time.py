@@ -8,8 +8,9 @@
 # print("Day", time_here[2], time_here.tm_mday)
 
 import time
-from time import time as my_timer
+from time import perf_counter as my_timer
 import random
+
 input("Press enter to start")
 
 wait_time = random.randint(1, 6)
@@ -23,3 +24,4 @@ print("Started at " + time.strftime("%X", time.localtime(start_time)))
 print("Time ended at " + time.strftime("%X", time.localtime(end_time)))
 
 print("Your reaction time was {} seconds".format(end_time - start_time))
+
