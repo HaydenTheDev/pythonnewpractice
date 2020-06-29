@@ -1,5 +1,9 @@
-print(dir())
-# print(dir(__builtins__))
+import shelve
+import random
 
-for m in dir(__builtins__):
-    print(m)
+# print(dir())
+# print()
+# print(dir(shelve))
+
+#help
+help(random.randint)
