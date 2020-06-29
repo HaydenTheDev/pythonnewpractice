@@ -6,4 +6,9 @@ import webbrowser
 # for i in range(10):
 #     print(1, 2, 3, 4, 5, 6, 7, 8, 9, sep=': ', end=' ')
 
+# chrome = webbrowser.get('chrome %s').open_new_tab("https://www.python.org")
+# should work by using chrome
+chrome = webbrowser.get(using='mozilla')
+chrome.open("https://www.youtube.com")
+
 
