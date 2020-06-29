@@ -19,13 +19,21 @@
 # with open("imelda3.txt", 'w') as imelda_file:
 #     print(imelda, file=imelda_file)
 
-with open("imelda3.txt", 'r') as imelda_file:
-    contents = imelda_file.readline()
+# with open("imelda3.txt", 'r') as imelda_file:
+#     contents = imelda_file.readline()
+#
+# imelda = eval(contents)
+#
+# print(imelda)
+# title, artist, year, tracks = imelda
+# print(title)
+# print(artist)
+# print(year)
 
-imelda = eval(contents)
+#Challenge
 
-print(imelda)
-title, artist, year, tracks = imelda
-print(title)
-print(artist)
-print(year)
+with open("sample.txt", 'w') as tables:
+    for i in range(2, 13):
+        for j in range(1, 13):
+            print("{1:>2} times {0} is {2}".format(i, j, i * j), file=tables)
+        print("-" * 20, file=tables)
