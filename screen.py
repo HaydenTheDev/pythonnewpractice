@@ -2,7 +2,7 @@ try:
     import tkinter
 except ImportError:
     import tkinter as tkinter
-
+import os
 mainWindow = tkinter.Tk()
 
 mainWindow.title("Grid Demo")
@@ -25,6 +25,10 @@ mainWindow.rowconfigure(4, weight=3)
 fileList = tkinter.Listbox(mainWindow)
 fileList.grid(row=1, column=0, sticky='nsew', rowspan=2)
 fileList.config(border=2, relief='sunken')
+for zone in os.listdir('/Windows/System32'):
+    fileList.insert(tkinter.END, zone)
 
-
+listScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL, command=fileList.yview)
+listScroll.grid(row=1, column=1, sticky='nsw', rowspan=2)
+fileList['yscrollcommand'] = listScroll.set
 mainWindow.mainloop()
