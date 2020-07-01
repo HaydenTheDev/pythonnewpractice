@@ -21,3 +21,5 @@ s = 1445733000
 t = s + (60 + 60)
 
 gb = pytz.timezone('GB')
+dt1 = pytz.utc.localize(datetime.datetime.fromtimestamp(s)).astimezone(gb)
+
