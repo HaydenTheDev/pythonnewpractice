@@ -6,16 +6,19 @@ import os
 mainWindow = tkinter.Tk()
 
 mainWindow.title("Grid Demo")
+# size of window
 mainWindow.geometry("640x400")
+# padding
+mainWindow['padx'] = 14
 
 label = tkinter.Label(mainWindow, text='Tkinter Grid Demo')
 label.grid(row=0, column=0, columnspan=3)
 
-mainWindow.columnconfigure(0, weight=1)
+mainWindow.columnconfigure(0, weight=100)
 mainWindow.columnconfigure(1, weight=1)
-mainWindow.columnconfigure(2, weight=3)
-mainWindow.columnconfigure(3, weight=3)
-mainWindow.columnconfigure(4, weight=3)
+mainWindow.columnconfigure(2, weight=1000)
+mainWindow.columnconfigure(3, weight=600)
+mainWindow.columnconfigure(4, weight=1000)
 mainWindow.rowconfigure(0, weight=1)
 mainWindow.rowconfigure(1, weight=10)
 mainWindow.rowconfigure(2, weight=1)
@@ -37,7 +40,7 @@ optionFrame = tkinter.LabelFrame(mainWindow, text="File Details")
 optionFrame.grid(row=1, column=2, sticky='ne')
 
 rbValue = tkinter.IntVar()
-rbValue.set(3)
+rbValue.set(1)
 
 # add radio buttons
 radio1 = tkinter.Radiobutton(optionFrame, text="Filename", value=1, variable=rbValue)
@@ -93,9 +96,11 @@ yearSpin.grid(row=1, column=2)
 
 # ok buttons
 okButton = tkinter.Button(mainWindow, text="OK")
-cancelButton = tkinter.Button(mainWindow, text="Cancel", command=mainWindow.quit())
+cancelButton = tkinter.Button(mainWindow, text="Cancel", command=mainWindow.quit)
 okButton.grid(row=4, column=3, sticky='e')
 cancelButton.grid(row=4, column=4, sticky='w')
+
+
 
 mainWindow.mainloop()
 
