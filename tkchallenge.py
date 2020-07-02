@@ -2,7 +2,7 @@ try:
     import tkinter
 except ImportError:
     import tkinter as tkinter
-import os
+
 keys = [[('C', 1), ('CE', 1)],
         [('7', 1), ('8', 1), ('9', 1), ('+', 1)],
         [('4', 1), ('5', 1), ('6', 1), ('-', 1)],
@@ -29,5 +29,12 @@ for keyRow in keys:
         tkinter.Button(keyPad, text=key[0]).grid(row=row, column=col,
                                                  columnspan=key[1],
                                                  sticky=tkinter.E + tkinter.W)
+        col += key[1]
     row += 1
+
+mainWindow.update()
+mainWindow.minsize(keyPad.winfo_width() + mainWindowPadding,
+                   result.winfo_height() + keyPad.winfo_height())
+mainWindow.maxsize(keyPad.winfo_width() + 50 +mainWindowPadding,
+                   result.winfo_height() + 50 +keyPad.winfo_height())
 mainWindow.mainloop()
