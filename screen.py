@@ -82,12 +82,21 @@ yearLabel.grid(row=0, column=2, sticky='w')
 
 # Date spinners
 daySpin = tkinter.Spinbox(dateFrame, width=5, values=tuple(range(1, 31)))
-monthSpin = tkinter.Spinbox(dateFrame, width=5, values=("Jan", "Feb", "March", "April", "May", "June", "July", "August",
-                                                        "September", "October", "November", "December"))
+monthSpin = tkinter.Spinbox(dateFrame, width=5, values=("Jan", "Feb", "March", "April",
+                                                        "May", "June", "July", "August",
+                                                        "September", "October", "November",
+                                                        "December"))
 yearSpin = tkinter.Spinbox(dateFrame, width=5, values=tuple(range(2000, 2099)))
 daySpin.grid(row=1, column=0)
 monthSpin.grid(row=1, column=1)
 yearSpin.grid(row=1, column=2)
+
+# ok buttons
+okButton = tkinter.Button(mainWindow, text="OK")
+cancelButton = tkinter.Button(mainWindow, text="Cancel", command=mainWindow.quit())
+okButton.grid(row=4, column=3, sticky='e')
+cancelButton.grid(row=4, column=4, sticky='w')
+
 mainWindow.mainloop()
 
 print(rbValue.get())
