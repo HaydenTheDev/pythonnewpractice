@@ -13,11 +13,13 @@
 # center_text("pizza is amazing")
 
 
-def some_text(*args):
+def some_text(*args, sep=' ', end_char='\n', centered_file=None, flush_me=False):
     text = ""
     for arg in args:
-        text += str(arg) + ""
+        text += str(arg) + sep
     left_margin = (80 - len(text)) // 2
-    print(" " * left_margin, text)
+    print(" " * left_margin, text, end=end_char, file=centered_file, flush=flush_me)
 
-some_text("first", "Second", 3, 4, "Pizza")
+
+some_text("first", "Second", 3, 4, "Pizza", sep=': ')
+print()
