@@ -2,12 +2,24 @@ try:
     import tkinter
 except ImportError:
     import tkinter as tkinter
+import math
 
 
 def parabola(page, size):
-    for x in range(-size, size):
+    for x in range(size):
         y = x * x / size
         plot(page, x, y)
+        plot(page, -x, -y)
+
+
+def circle(page, radius, g, h):
+    for x in range(g * 100, (g + radius) * 100):
+        x /= 100
+        y = h + (math.sqrt(radius ** 2 - ((x-g) ** 2)))
+        plot(page, x, y)
+        plot(page, x, 2 * h - y)
+        plot(page, 2 * g - x, y)
+        plot(page, 2 * g - x, 2 * h - y)
 
 
 def draw_axes(page):
@@ -39,4 +51,5 @@ draw_axes(canvas)
 
 parabola(canvas, 100)
 parabola(canvas, 200)
+circle(canvas, 100, 100, 100)
 mainWindow.mainloop()
