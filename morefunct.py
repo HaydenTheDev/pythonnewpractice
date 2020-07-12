@@ -5,7 +5,7 @@ except ImportError:
 
 
 def parabola(x):
-    y = x * x
+    y = x * x / 100
     return y
 
 
@@ -28,13 +28,16 @@ mainWindow = tkinter.Tk()
 mainWindow.title("Parabola")
 mainWindow.geometry("640x480")
 
-canvas = tkinter.Canvas(mainWindow, width=640, height=480)
+canvas = tkinter.Canvas(mainWindow, width=320, height=480)
 canvas.grid(row=0, column=0)
-draw_axes(canvas)
 
+canvas2 = tkinter.Canvas(mainWindow, width=320, height=480, background="blue")
+canvas2.grid(row=0, column=1)
+draw_axes(canvas)
+draw_axes(canvas2)
 
 for x in range(-100, 100):
     y = parabola(x)
-    plot(canvas, x, y)
+    plot(canvas, x, -y)
 
 mainWindow.mainloop()
