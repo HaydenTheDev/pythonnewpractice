@@ -1,11 +1,23 @@
 #  Object Orientated Programming
 
+"""
+Class: template for creating objects. All objects created using the same class will have the same
+characteristics.
+Object: an instance of a class.
+Instantiate: Create an instance of a class.
+Method: A function defined in a class.
+Attribute: A variable bound to an instance of class.
+"""
+
 
 class Kettle(object):
     def __init__(self, make, price):
         self.make = make
         self.price = price
         self.on = False
+
+    def switch_on(self):
+        self.on = True
 
 
 kenwood = Kettle("Kenwood", 8.99)
@@ -23,12 +35,19 @@ print("Models: {} = {}, {} = {}".format(kenwood.make,
 
 print("Models: {0.make} = {0.price}, {1.make} = {1.price}".format(kenwood, hamilton))
 
+print(hamilton.on)
+hamilton.switch_on()
+print(hamilton.on)
 
-"""
-Class: template for creating objects. All objects created using the same class will have the same
-characteristics.
-Object: an instance of a class.
-Instantiate: Create an instance of a class.
-Method: A function defined in a class.
-Attribute: A variable bound to an instance of class.
-"""
+Kettle.switch_on(kenwood)
+print(kenwood.on)
+kenwood.switch_on()
+
+print("*" * 80)
+
+kenwood.power = 1.5
+print(kenwood.power)
+hamilton.power = 5.5
+print(hamilton.power)
+hamilton.power += kenwood.power
+print(hamilton.power)
