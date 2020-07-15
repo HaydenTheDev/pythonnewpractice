@@ -27,6 +27,7 @@ def fib(n):
     else:
         return fib(n-1) + fib(n-2)
 
+
 def fibonacci(n):
     if n == 0:
         result = 0
