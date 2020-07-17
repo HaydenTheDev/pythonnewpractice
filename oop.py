@@ -11,6 +11,9 @@ Attribute: A variable bound to an instance of class.
 
 
 class Kettle(object):
+
+    power_source = "electricity"
+
     def __init__(self, make, price):
         self.make = make
         self.price = price
@@ -49,5 +52,6 @@ kenwood.power = 1.5
 print(kenwood.power)
 hamilton.power = 5.5
 print(hamilton.power)
-hamilton.power += kenwood.power
-print(hamilton.power)
+print(Kettle.power_source)
+print(kenwood.power_source)
+print(hamilton.power_source)
