@@ -52,6 +52,12 @@ kenwood.power = 1.5
 print(kenwood.power)
 hamilton.power = 5.5
 print(hamilton.power)
+print("Switch to atomic power")
+Kettle.power_source = "Atomic power"
+kenwood.power_source = "gas"
 print(Kettle.power_source)
 print(kenwood.power_source)
 print(hamilton.power_source)
+print(Kettle.__dict__)
+print(kenwood.__dict__)
+print(hamilton.__dict__)
