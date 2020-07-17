@@ -16,3 +16,13 @@ class Account:
 
     def show_balance(self):
         print("Balance is {} ".format(self.balance))
+
+
+if __name__ == "__main__":
+    hayden = Account("Hayden", 0)
+    hayden.show_balance()
+
+    hayden.deposit(1000)
+    hayden.show_balance()
+    hayden.withdraw(500)
+    hayden.show_balance()
