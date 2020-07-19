@@ -5,7 +5,8 @@ import datetime
 class Account:
     """Simple account class with balance"""
 
-    def _current_time(self):
+    @staticmethod
+    def _current_time():
         utc_time = datetime.datetime.utcnow()
         return pytz.utc.localize(utc_time)
 
@@ -20,7 +21,7 @@ class Account:
             self.balance += amount
             self.show_balance()
             self.transaction_list.append(
-                (pytz.utc.localize(datetime.datetime.utcnow()), amount))
+                (Account._current_time(), amount))
 
     def withdraw(self, amount):
         if 0 < amount <= self.balance:
