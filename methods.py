@@ -26,6 +26,7 @@ class Account:
     def withdraw(self, amount):
         if 0 < amount <= self.balance:
             self.balance -= amount
+            self.transaction_list.append((Account._current_time(), -amount))
         else:
             print("You don't have that much to withdraw. ")
         self.show_balance()
@@ -51,3 +52,9 @@ if __name__ == "__main__":
     hayden.deposit(1000)
     hayden.withdraw(500)
     hayden.withdraw(4000)
+    hayden.show_transactions()
+
+    steve = Account("steve", 1000)
+    steve.deposit(100)
+    steve.withdraw(100)
+    steve.show_transactions()
