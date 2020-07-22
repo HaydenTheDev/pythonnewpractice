@@ -13,8 +13,9 @@ class Account:
     def __init__(self, name, balance):
         self.name = name
         self.balance = balance
-        self.transaction_list = []
+        self.transaction_list = [(Account._current_time(), balance)]
         print("Account created for " + self.name)
+        self.show_balance()
 
     def deposit(self, amount):
         if amount > 0:
