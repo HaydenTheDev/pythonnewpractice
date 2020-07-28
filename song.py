@@ -8,17 +8,19 @@ class Song:
     """
 
     def __init__(self, title, artist, duration):
-        """Song init method
 
-        args:
-            title (str): Initalises the 'title' attribute
-            artist (Artist): At artist object representing the song's creator
-            duration (Optional(int): Initial value for the 'duration' attribute
-                Will default to zero if not specified
-        """
         self.title = title
         self.artist = artist
         self.duration = duration
 
 print(Song.__doc__)
 print(Song.__init__.__doc__)
+Song.__init__.__doc__ = """Song init method
+
+      args:
+          title (str): Initalises the 'title' attribute
+          artist (Artist): At artist object representing the song's creator
+          duration (Optional(int): Initial value for the 'duration' attribute
+              Will default to zero if not specified
+      """
+help(Song)
