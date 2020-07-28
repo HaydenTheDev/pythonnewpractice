@@ -27,7 +27,7 @@ class Album:
 
     Methods:
         addSong: Used to add a new song to the album's track list.
-        """
+    """
 
     def __init__(self, name, year, artist=None):
         self.name = name
@@ -47,7 +47,7 @@ class Album:
             position (Optional(int)): If specified, the song will be added to that position
             in the track list - inserting it between other songs if necessary.
             Otherwise , the song will be added to the end of the list.
-            """
+        """
         if positions is None:
             self.tracks.append(song)
         else:
@@ -64,7 +64,8 @@ class Artist:
             not an exhaustive list of the artist's publishes albums.
 
     Methods:
-            add_album: Use to add a new alubm to the artist's albums list"""
+            add_album: Use to add a new album to the artist's albums list
+    """
 
     def __init__(self, name):
         self.name = name
@@ -78,3 +79,19 @@ class Artist:
                 if the album is already present, it will not be added again.
         """
         self.albums.append(album)
+
+
+def load_data():
+    new_artist = None
+    new_album = None
+    artist_list = []
+
+    with open("albums.txt", 'r') as albums:
+        for line in albums:
+            artist_field, album_field, year_field, song_field = tuple(line.strip("\n").split("\t"))
+            year_field = int(year_field)
+            print(artist_field, album_field, year_field, song_field)
+
+
+if __name__ == '__main__':
+    load_data()
